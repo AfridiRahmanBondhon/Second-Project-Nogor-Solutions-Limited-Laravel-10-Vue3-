@@ -8,6 +8,8 @@ import userRegistration from './User/Registration.vue'
 import userLogin from './User/Login.vue'
 import userEdit from './User/EditUser.vue'
 import resetPassword from './User/password/ResetPassword.vue'
+import products from './Product/ViewProduct.vue'
+import product from './Product/SingleProduct.vue'
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -65,6 +67,16 @@ const router = createRouter({
             path: '/admin/resetPassword',
             name: 'resetPassword',
             component: resetPassword
+        },
+        {
+            path: '/products',
+            name: 'products',
+            component: products
+        },
+        {
+            path: '/products/:id/details',
+            name: 'product',
+            component: product
         },
     ]
 })
